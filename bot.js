@@ -46,7 +46,7 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = 'The above Phi Alpha has been added to the jawn repository. Pa to all';
+  botResponse = 'The above Phi Alpha has been added to the jawn repository.';
 
   options = {
     hostname: 'api.groupme.com',
