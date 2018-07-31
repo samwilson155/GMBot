@@ -9,6 +9,7 @@ function respond() {
       botRegex = /\bPA\b/;
 	  botRegex2 = /\bPa\b/;
 	  botRegex3 = /\bpa\b/;
+	  botRegex4 = /]bTG\b/;
 	  
 
   if(request.text && botRegex.test(request.text)) {
@@ -34,6 +35,16 @@ function respond() {
     if(request.text && botRegex3.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
+    this.res.end();
+  } else {
+    console.log("don't care");
+    this.res.writeHead(200);
+    this.res.end();
+  }
+  
+    if(request.text && botRegex4.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage2();
     this.res.end();
   } else {
     console.log("don't care");
@@ -81,7 +92,7 @@ function postMessage() {
 function postMessage2() {
   var botResponse, options, body, botReq;
 
-  botResponse = 'Goofy Ass';
+  botResponse = 'The gentleman is a man whose conduct proceeds';
 
   options = {
     hostname: 'api.groupme.com',
