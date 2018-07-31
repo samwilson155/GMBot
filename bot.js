@@ -7,7 +7,9 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /\bPA\b/;
-	  botRegex2 = /\bHeHe\b/;
+	  botRegex2 = /\bPa\b/;
+	  botRegex3 = /\bpa\b/;
+	  
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -21,7 +23,17 @@ function respond() {
   
     if(request.text && botRegex2.test(request.text)) {
     this.res.writeHead(200);
-    postMessage2();
+    postMessage();
+    this.res.end();
+  } else {
+    console.log("don't care");
+    this.res.writeHead(200);
+    this.res.end();
+  }
+  
+    if(request.text && botRegex3.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage();
     this.res.end();
   } else {
     console.log("don't care");
