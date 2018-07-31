@@ -9,7 +9,7 @@ function respond() {
       botRegex = /\bPA\b/;
 	  botRegex2 = /\bPa\b/;
 	  botRegex3 = /\bpa\b/;
-	  botRegex4 = /]bTG\b/;
+	  botRegex4 = /\bTG\b/;
 	  
 
   if(request.text && botRegex.test(request.text)) {
