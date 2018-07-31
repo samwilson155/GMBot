@@ -9,7 +9,7 @@ function respond() {
       botRegex = /\bPA\b/;
 	  botRegex2 = /\bPa\b/;
 	  botRegex3 = /\bpa\b/;
-	  botRegex4 = /\bTG\b/;
+	  botRegex4 = /\bPA Minerva\b/;
 	  
 
   if(request.text && botRegex.test(request.text)) {
@@ -92,7 +92,7 @@ function postMessage() {
 function postMessage2() {
   var botResponse, options, body, botReq;
 
-  botResponse = 'The gentleman is a man whose conduct proceeds';
+  botResponse = 'Thank you for the phi alpha. Throwin this boy in the repository now!';
 
   options = {
     hostname: 'api.groupme.com',
